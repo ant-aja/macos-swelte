@@ -1,3 +1,4 @@
+
 <script lang="ts">
   import { draggable } from '@neodrag/svelte';
   import { onMount } from 'svelte';
@@ -110,6 +111,7 @@
   onMount(() => windowEl?.focus());
 </script>
 
+
 <section
   class="container"
   class:dark={$theme.scheme === 'dark'}
@@ -119,7 +121,8 @@
   style:z-index={$appZIndices[appID]}
   tabindex="-1"
   bind:this={windowEl}
-  use:draggable={{
+   
+  use:draggable ={{
     defaultPosition,
     handle: '.app-window-drag-handle',
     bounds: { bottom: -6000, top: 27.2, left: -6000, right: -6000 },
